@@ -6,93 +6,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="stylesheet" href="./font.css">
-  <style>
-    * {
-      padding: 0;
-      margin: 0;
-      box-sizing: border-box;
-      line-height: 100%;
-      letter-spacing: 0%;
-    }
-
-    .container {
-      width: 100%;
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 40px 20px;
-    }
-
-    h1 {
-      font-family: 'Gilroy';
-      font-weight: 700;
-      font-size: 48px;
-      text-align: center;
-      color: #000000;
-    }
-
-    .user {
-      margin: 55px 0;
-      width: 200px;
-    }
-
-    .user pre {
-      font-family: 'Roboto';
-      font-weight: 400;
-      font-size: 18px;
-    }
-
-    button {
-      display: block;
-      margin: 0 auto;
-      width: 232px;
-      height: 42px;
-      border-radius: 4px;
-      background-color: #0071e3;
-      border: none;
-    }
-
-    a {
-      font-family: 'Gilroy';
-      font-weight: 500;
-      font-size: 14px;
-      text-align: center;
-      color: #fff;
-      text-decoration: none;
-    }
-  </style>
+  <link rel="stylesheet" href="./account.css">
 </head>
 
 <body>
   <section>
     <div class="container"></div>
   </section>
-  <script>
-    const container = document.querySelector('.container')
-    const search = window.location.search.slice(1).split("=")[1];
-    const url = "https://jsonplaceholder.typicode.com/users";
-
-    fetch(`${url}/${search}`)
-      .then((res) => res.json())
-      .then((user) => {
-        const title = document.createElement('h1')
-        title.textContent = `User: ${search} - ${user.name}`
-
-        const userDiv = document.createElement("div");
-        userDiv.classList.add("user");
-
-        const userData = document.createElement('pre')
-        userData.textContent = JSON.stringify(user, null, 2)
-
-        const button = document.createElement('button')
-        const link = document.createElement('a')
-        link.textContent = 'На главную'
-        link.href = "/main.html";
-        button.append(link)
-
-        userDiv.append(userData)
-        container.append(title, userDiv, button)
-      });
-  </script>
+  <script src="./account.js"></script>
 </body>
 
 </html>
