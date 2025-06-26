@@ -1,0 +1,74 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  line-height: 100%;
+  letter-spacing: 0%;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+h1 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 48px;
+  text-align: center;
+  color: #000000;
+}
+
+.users {
+  margin-top: 80px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.user {
+  border-radius: 10px;
+  background-color: #f0f0f0;
+  padding: 21px 0 21px 25px;
+  border: 1px solid #007fff;
+  width: 282px;
+  height: 205px;
+}
+
+.user .title {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 100%;
+  margin-bottom: 15.4px;
+}
+
+.user p {
+  font-family: "Gilroy", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  color: #0000008c;
+  display: block;
+  margin-bottom: 2px;
+}
+
+.user button {
+  margin-top: 24px;
+  width: 232px;
+  height: 42px;
+  border-radius: 4px;
+  background-color: #0071e3;
+  border: none;
+}
+
+.user a {
+  font-family: "Gilroy", sans-serif;
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 14px;
+  text-align: center;
+  text-decoration: none;
+}
